@@ -1,7 +1,8 @@
-package dev.bellu.foodapp.presentation.screens
+package dev.bellu.foodapp.presentation.screens.auth
 
 import HaveAccountButton
 import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -32,22 +33,28 @@ fun LoginScreen(navController: NavController) {
                 })
                 Spacer(modifier = Modifier.fillMaxHeight(0.07f))
                 InputSample(
-                    label = "Name",
-                    placeholder = "Example: John...",
-                )
-                InputSample(
                     label = "E-mail",
                     placeholder = "Example: bellu@foodapp.com",
                 )
                 InputSample(
                     label = "Password",
-                    placeholder = "Enter your password",
+                    placeholder = "Enter your Password",
+                )
+                Text(
+                    text = "Forgot Password?",
+                    style = TextManager.smallPurple,
+                    modifier = Modifier
+                        .clickable {  }
                 )
                 Spacer(modifier = Modifier.fillMaxHeight(0.1f))
-                ButtonSample()
+                ButtonSample(
+                    onClick = {
+                        navController.navigate("otp")
+                    }
+                )
                 Spacer(modifier = Modifier.fillMaxHeight(0.1f))
                 HaveAccountButton(
-                    haveAccount = true,
+                    haveAccount = false,
                     onClick = {
                         navController.navigate("register")
                     }
@@ -55,4 +62,3 @@ fun LoginScreen(navController: NavController) {
             })
     }
 }
-

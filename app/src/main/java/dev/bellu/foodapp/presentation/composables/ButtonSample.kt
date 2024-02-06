@@ -15,7 +15,9 @@ import androidx.compose.ui.unit.dp
 import dev.bellu.foodapp.presentation.shared.Colors
 
 @Composable
-fun ButtonSample() {
+fun ButtonSample(
+    onClick: () -> Unit
+) {
 
     val buttonColors = ButtonDefaults.buttonColors(
         containerColor = Colors.onPrimary
@@ -26,7 +28,7 @@ fun ButtonSample() {
         modifier = Modifier
             .fillMaxWidth()
             .height(50.dp),
-        onClick = { /*TODO*/ },
+        onClick = { onClick() },
         content = {
             Text(text = "Continue")
         }

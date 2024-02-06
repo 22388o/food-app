@@ -35,11 +35,25 @@ object TextManager {
     val textHaveAccount = TextStyle(
         fontSize = 14.sp,
         fontWeight = FontWeight.Medium,
-        color = Colors.onTertiary
+        color = Colors.onTertiary,
+        fontFamily = fontFamily
+    )
+    val smallPurple = TextStyle(
+        fontSize = 14.sp,
+        fontWeight = FontWeight.Medium,
+        color = Colors.onPrimary,
+        fontFamily = fontFamily
+    )
+    val smallRed = TextStyle(
+        fontSize = 14.sp,
+        fontWeight = FontWeight.Medium,
+        color = Colors.error,
+        fontFamily = fontFamily
     )
     val mediumWhite = TextStyle(
         fontSize = 24.sp,
         fontWeight = FontWeight.SemiBold,
-        color = Colors.white
+        color = Colors.white,
+        fontFamily = fontFamily
     )
 }
